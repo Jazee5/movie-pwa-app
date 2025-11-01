@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen font-sans antialiased text-center;
+}
+
+main {
+  @apply py-8;
+}
+
+form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  color: #ffffff !important;
+  background-color: #1f2937 !important;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Movie Grid Layout */
+.movie-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center px-8 py-10;
+}
+
+/* Individual Movie Cards - Dark Mode */
+.movie-card {
+  @apply bg-gray-800 bg-opacity-70 rounded-2xl shadow-xl overflow-hidden transform transition duration-500 mx-auto;
+  animation: fadeIn 0.6s ease-in-out forwards;
+  width: 260px;
+  height: 420px;
+}
+
+/* Individual Movie Cards - Light Mode */
+.movie-card.light-mode {
+  @apply bg-white shadow-2xl;
+}
+
+/* Hover effects - Dark Mode */
+.movie-card:hover {
+  @apply scale-105 shadow-purple-500/40;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+/* Hover effects - Light Mode */
+.movie-card.light-mode:hover {
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.4);
+}
+
+/* Movie Poster */
+.movie-card img {
+  @apply w-full h-72 object-cover mx-auto rounded-t-2xl border-b border-gray-700;
+  transition: transform 0.4s ease-in-out;
+}
+
+.movie-card.light-mode img {
+  @apply border-gray-300;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Movie Title & Year - Dark Mode */
+.movie-card h2 {
+  @apply text-lg font-bold mt-3 mb-1 text-gradient;
+}
+
+.movie-card p {
+  @apply text-gray-400 text-sm;
+}
+
+/* Movie Title & Year - Light Mode */
+.movie-card.light-mode h2 {
+  @apply text-gray-900;
+}
+
+.movie-card.light-mode p {
+  @apply text-gray-600;
+}
+
+/* Gradient Text Effect */
+.text-gradient {
+  background: linear-gradient(to right, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons with glowing hover effect */
+.btn-glow {
+  @apply transition duration-300 ease-in-out transform;
+}
+
+.btn-glow:hover {
+  @apply scale-105 shadow-lg;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6d28d9, #2563eb);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #8b5cf6, #3b82f6);
+}
