@@ -7,7 +7,7 @@ function MovieDetails({ imdbID, onBack, onMovieClick, onToggleFavorite, isFavori
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://www.omdbapi.com?apikey=894c3be2";
+const API_URL = "https://www.omdbapi.com?apikey=894c3be2";
 
   useEffect(() => {
     const fetchMovieDetails = async () => {

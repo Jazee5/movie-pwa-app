@@ -7,7 +7,7 @@ import MovieDetails from "./components/MovieDetails";
 import Footer from "./components/Footer";
 import FavoritesPage from "./components/FavoritesPage";
 
-const API_URL = "http://www.omdbapi.com?apikey=894c3be2";
+const API_URL = "https://www.omdbapi.com?apikey=894c3be2";
 
 function App() {
   const [movies, setMovies] = useState([]);

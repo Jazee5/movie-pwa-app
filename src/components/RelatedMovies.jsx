@@ -5,8 +5,7 @@ function RelatedMovies({ genre, currentMovieId, onMovieClick, darkMode }) {
   const [relatedMovies, setRelatedMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://www.omdbapi.com?apikey=894c3be2";
-
+const API_URL = "http://www.omdbapi.com?apikey=894c3be2";
   useEffect(() => {
     const fetchRelatedMovies = async () => {
       if (!genre) return;
